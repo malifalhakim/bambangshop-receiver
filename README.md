@@ -85,5 +85,8 @@ This is the place for you to write reflections:
 ### Mandatory (Subscriber) Reflections
 
 #### Reflection Subscriber-1
+1. Pada kasus ini digunakan RwLock karena RwLock dapat menangani banyak *thread* untuk membaca vektor yang berisi notifikasi secara bersamaan. Sementara itu, Mutex hanya dapat memberikan akses kepada satu *thread* saja untuk membaca suatu data atau dalam hal ini vektor. Yang mana, hal tersebut tidak sesuai dengan kasus kita, karena kita ingin banyak subscriber atau thread dapat membaca notifikasi bersamaan.
+
+2. `lazy_static` membantu kita untuk menginisialisasi variabel static pada rust. Dimana variabel tersebut hanya akan ada 1 dalam program tersebut. Pada rust variabel static dibuat secara *immutable* yang bertujuan untuk menjamin keamanan terutama berkaitan dengan *concurrent programming*. Rust mendorong kita untuk berpikir tentang *synchronization* dan cara menanganinya untuk mencegah kondisi *data races* atau masalah konkurensi lain.
 
 #### Reflection Subscriber-2
