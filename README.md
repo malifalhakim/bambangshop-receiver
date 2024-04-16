@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. `lazy_static` membantu kita untuk menginisialisasi variabel static pada rust. Dimana variabel tersebut hanya akan ada 1 dalam program tersebut. Pada rust variabel static dibuat secara *immutable* yang bertujuan untuk menjamin keamanan terutama berkaitan dengan *concurrent programming*. Rust mendorong kita untuk berpikir tentang *synchronization* dan cara menanganinya untuk mencegah kondisi *data races* atau masalah konkurensi lain.
 
 #### Reflection Subscriber-2
+1. Menurut saya lib.rs berguna untuk menyimpan informasi penting dan objek dan fungsi penting dari library atau aplikasi yang kita buat. Contohnya menyimpan informasi mengenai config aplikasi yang berisi informasi seperti root url, instance name, dan lain-lain. Selain itu dapat menyimpan objek penting untuk aplikasi seperti Error Response, dan lainnya
+
+2. Observer pattern membantu kita dalam menambahkan subsriber dengan mudah karena setiap subscriber tersebut cukup mendaftarkan dirinya ke publisher. Publisher tidak perlu mengetahui banyak hal tentang subscriber. Hal ini membantu melakukan *decoupling* antara publisher dan subscriber sehingga memudahkan untuk menambahkan subscriber tanpa mempengaruhi publisher. Penambahan Instance MainApp juga dapat dilakukan, subscriber hanya perlu untuk mendaftarkan dirinya kepada setiap instance.
+
+3. Menurut saya, adanya postman collection ini sangatlah membantu saya dalam memeriksa kebenaran program kita dengan mudah. Postman collection sangat membantu saya dalam mendokumentasikan pengetesan API dan membuat pengetesan berjalan dengan lebih sistematis. Hal ini sangat membantu saya dalam mengerjakan tutorial dan group project.
